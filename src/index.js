@@ -17,6 +17,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.static(path.resolve(__dirname, "public")));
+
 app.use(cors());
 app.use(require("./routes"));
 
