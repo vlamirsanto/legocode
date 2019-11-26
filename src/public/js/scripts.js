@@ -1,13 +1,11 @@
 $(document).ready(function() {
   var html = {
-    textarea: `<textarea class="form-control"></textarea>`,
-    input: `
-  <input
+    body: `<textarea class="form-control"></textarea>`,
+    input: `<input
     type="text"
     class="form-control"
     placeholder="Digite sua mensagem"
-  />
-`,
+  />`,
     button: `<span class="input-btn">
     <button class="btn btn-success" type="button">Enviar</button>
   </span>`
@@ -17,13 +15,13 @@ $(document).ready(function() {
     var rel = $(this).attr("rel");
     var value = $("#code").val();
 
-    $("#code").html(value + html[rel]);
+    $("#code").html(value + html[rel] + "\n");
   });
 
   $("#renderCode").click(function() {
     var code = $("#code").val();
     console.log(code);
 
-    $("#body").html(code);
+    $("#chat1").html(code);
   });
 });
